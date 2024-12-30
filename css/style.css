@@ -1,0 +1,922 @@
+/* Reset y configuración general */
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    color: white;
+    overflow-x: hidden; /* Previene el scroll horizontal */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/assets/images/Inicio.webp') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Asegura que nada salga del contenedor principal */
+}
+
+/* Overlay oscuro para el fondo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    z-index: 0;
+    pointer-events: none; /* Permite interactuar con los elementos encima */
+}
+
+/* Menú de navegación */
+.container {
+    background-color: black;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+.container a {
+    font-size: 1.1em;
+}
+
+.container a:hover {
+    color: #0051a8;
+}
+
+.container img {
+    margin: 0px 8px;
+    width: 3em;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.733) !important;
+    border-radius: 20px;
+    position: relative;
+    z-index: 3; /* Asegura que el menú esté encima del overlay */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #0065d1;
+}
+
+/* Sección del logo */
+.logo-container {
+    position: relative;
+    max-width: 30em; /* Ajustado para evitar desbordes */
+    width: 100%;
+    margin: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329); /* Fondo semitransparente */
+    z-index: 1; /* Asegura que esté debajo del logo */
+}
+
+.logo {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: 2; /* Asegura que esté encima del overlay */
+    width: 100%; /* Ajustado para evitar desbordes */
+    height: 100%; /* Ajustado para evitar desbordes */
+    border-radius: 50px;
+}
+
+/* Contenido principal */
+.row {
+    max-width: 100%; /* Evita desbordes horizontales */
+    margin: 0 0;
+    padding: 0 0;
+    position: relative;
+    width: 80%;
+    z-index: 2; /* Asegura que el contenido principal esté encima del overlay */
+}
+
+.col-lg-6 {
+    text-align: center;
+    width: 18%;
+}
+
+.subtittle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtittle-1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tittle {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.buttom {
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 10px 40px 13px 40px;
+    background-color: #ffffff;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.4s;
+    border: none;
+    border-radius: 50px;
+}
+
+.buttom:hover {
+    font-size: 1.3rem;
+    background-color: #004c9c;
+    box-shadow: 0px 0px 10px 0px rgb(1, 1, 117);
+    color: white;
+}
+
+/* logo Samsung*/
+.samsung-logo {
+    position: fixed; /* Mantiene la posición fija al hacer scroll */
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    right: 10px; /* Ajusta la distancia desde el lado derecho */
+    z-index: 100; /* Asegura que esté siempre encima del contenido */
+    max-width: 8%; /* Controla el tamaño del logo */
+    transition: transform 0.2s ease; /* Efectos al interactuar */
+    margin: 2.5%;
+}
+
+.samsung-logo:hover {
+    transform: scale(1.025); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+/* Logo de la marca */
+.brand-logo img {
+    max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 1500px) {
+    .row {
+        width: 100%;
+    }
+    .subtittle {
+        font-size: 1.2rem;
+    }
+    
+    .subtittle-1 {
+        font-size: 1.2rem;
+    }
+    
+    .tittle {
+        font-size: 3rem;
+    }
+    
+    .buttom {
+        font-size: 1rem;
+    }
+    
+    .buttom:hover {
+        font-size: 1rem;
+    }
+
+    .logo-container {
+        max-width: 25em; /* Ajustado para evitar desbordes */
+    }
+    .samsung-logo {
+        max-width: 10%; /* Controla el tamaño del logo */
+    }
+}
+
+@media (max-width: 991px) {
+
+    .row {
+        align-content: flex-start;
+    }
+
+    .subtittle {
+        font-size: 1.5rem;
+    }
+    
+    .subtittle-1 {
+        font-size: 1.6rem;
+    }
+    
+    .tittle {
+        font-size: 3.5rem;
+    }
+    
+    .buttom {
+        font-size: 1.4rem;
+        padding: 10px 100px 13px 100px;
+    }
+    
+    .buttom:hover {
+        font-size: 1.4rem;
+    }
+
+    .logo-container {
+        max-width: 22em;
+    }
+
+    .logo {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .samsung-logo {
+        max-width: 19%; /* Controla el tamaño del logo */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subtittle {
+        font-size: 1.2rem;
+    }
+    
+    .subtittle-1 {
+        font-size: 1.2rem;
+    }
+    
+    .tittle {
+        font-size: 2.5rem;
+    }
+    
+    .buttom {
+        font-size: 1.3rem;
+        padding: 10px 60px 13px 60px;
+    }
+    
+    .buttom:hover {
+        font-size: 1.3rem;
+    }
+
+    .logo-container {
+        max-width: 18em;
+    }
+
+    .logo {
+        margin-top: 20%;
+        margin-bottom: 15%;
+    }
+
+    .samsung-logo {
+        max-width: 25%; /* Controla el tamaño del logo */
+    }
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXX */
+/* X Sección "Conócenos X */
+/* XXXXXXXXXXXXXXXXXXXXXX */
+
+/* Overlay oscuro */
+.overlay-carousel {
+    background-color: rgba(0, 0, 0, 0.247);
+    z-index: 1;
+}
+
+/* Títulos */
+.triangulo {
+    width: 0px;
+    height: 0px;
+    border-bottom: 00px solid rgba(0, 0, 0, 0.904);
+    border-left: 00px solid transparent;
+    border-right: 35em solid transparent;
+    border-top: 15em solid rgb(0, 0, 0, 0.904);
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    z-index: 1;
+}
+.text-conocenos {
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    padding: 1%;
+    text-align: center;
+}
+.title-conocenos h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+.title-conocenos h3 {
+    font-size: 1.3rem;
+    color: white;
+}
+.carousel-text {
+    padding: 2% 5%;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.671);
+    position: absolute;
+    right: 20%;
+    left: 20%;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+}
+.carousel-text-1 {
+    bottom: 34%;
+}
+.carousel-text-2 {
+    bottom: 33%;
+}
+.carousel-text-3 {
+    bottom: 35%;
+}
+.carousel-text-4 {
+    bottom: 30%;
+}
+.carousel-text h5 {
+    font-size: 1.3em;
+    font-weight: 5000;
+}
+.carousel-text p {
+    font-size: 1.2em;
+    font-weight: 200;
+}
+.carousel-container {
+    max-height: 60vh;
+}
+.carousel-inner img {
+    object-fit: cover;
+}
+
+@media (max-width: 1400px) {
+    .title-conocenos h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        z-index: 1;
+        color: white;
+        position:sticky;
+        z-index: 1;
+    }
+    .title-conocenos h3 {
+        font-size: 1em;
+        font-weight: 0;
+        position:sticky;
+        z-index: 1;
+        color: white;
+    }
+    .text-conocenos {
+        padding: 1%;
+    }
+    .triangulo {
+        border-right: 24em solid transparent;
+        border-top: 11em solid rgb(0, 0, 0, 0.801);
+    }
+    .carousel-text h5 {
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+    .carousel-text p {
+        font-size: 1.1em;
+        font-weight: 200;
+    }
+    .carousel-text {
+        padding: 1% 3%;
+        bottom: 30%;
+    }
+    .carousel-text-1 {
+        bottom: 40%;
+    }
+    .carousel-text-2 {
+        bottom: 35%;
+    }
+    .carousel-text-3 {
+        bottom: 35%;
+    }
+}
+@media (max-width: 1200px) {
+    .title-conocenos h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        z-index: 1;
+        color: white;
+        position:sticky;
+    }
+    .title-conocenos h3 {
+        font-size: 0.9em;
+        font-weight: 0;
+        position:sticky;
+        z-index: 1;
+        color: white;
+    }
+    .text-conocenos {
+        padding: 2%; 
+    }
+    .triangulo {
+        border-right: 24em solid transparent;
+        border-top: 11em solid rgb(0, 0, 0, 0.801);
+    }
+    .carousel-text h5 {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .carousel-text p {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    .carousel-text {
+        text-align: center;
+        padding: 1% 3%;
+        bottom: 30%;
+        right: 25%;
+        left: 25%;
+    }
+    .carousel-text-1 {
+        bottom: 38%;
+    }
+    .carousel-text-2 {
+        bottom: 35%;
+    }
+    .carousel-text-3 {
+        bottom: 35%;
+    }
+    .carousel-text-4 {
+        bottom: 28%;
+    }
+    .samsung-logo {
+        max-width: 10%; /* Controla el tamaño del logo */
+    }
+}
+@media (max-width: 992px) {
+    .title-conocenos h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        z-index: 1;
+        color: white;
+        position:sticky;
+    }
+    .title-conocenos h3 {
+        font-size: 0.9em;
+        font-weight: 0;
+        position:sticky;
+        z-index: 1;
+        color: white;
+    }
+    .text-conocenos {
+        padding: 2%; 
+    }
+    .triangulo {
+        border-right: 23em solid transparent;
+        border-top: 10em solid rgb(0, 0, 0, 0.801);
+    }
+    .carousel-text h5 {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .carousel-text p {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    .carousel-text {
+        text-align: center;
+        padding: 1% 3%;
+        bottom: 30%;
+        right: 25%;
+        left: 25%;
+    }
+    .carousel-text-1 {
+        bottom: 39%;
+    }
+    .carousel-text-2 {
+        bottom: 36%;
+    }
+    .carousel-text-3 {
+        bottom: 33%;
+    }
+    .carousel-text-4 {
+        bottom: 28%;
+    }
+    .samsung-logo {
+        max-width: 10%; /* Controla el tamaño del logo */
+    }
+}
+@media (max-width: 768px) {
+    .title-conocenos h2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        z-index: 1;
+        color: white;
+        position:sticky;
+    }
+    .title-conocenos h3 {
+        font-size: 0.9em;
+        font-weight: 0;
+        position:sticky;
+        z-index: 1;
+        color: white;
+    }
+    .text-conocenos {
+        padding: 2%; 
+    }
+    .triangulo {
+        border-right: 23em solid transparent;
+        border-top: 10em solid rgb(0, 0, 0, 0.801);
+    }
+    .carousel-text h5 {
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    .carousel-text p {
+        font-size: 1em;
+        font-weight: 200;
+    }
+    .carousel-text {
+        text-align: center;
+        padding: 2% 3%;
+        bottom: 30%;
+        right: 20%;
+        left: 20%;
+    }
+    .carousel-text-1 {
+        bottom: 37%;
+    }
+    .carousel-text-2 {
+        bottom: 34%;
+    }
+    .carousel-text-3 {
+        bottom: 33%;
+    }
+    .carousel-text-4 {
+        bottom: 25%;
+    }
+    .samsung-logo {
+        max-width: 15%; /* Controla el tamaño del logo */
+    }
+}
+@media (max-width: 576px) {
+    .title-conocenos h2 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        z-index: 1;
+        color: white;
+        position:sticky;
+    }
+    .title-conocenos h3 {
+        font-size: 0.7em;
+        font-weight: 0;
+        position:sticky;
+        z-index: 1;
+        color: white;
+    }
+    .text-conocenos {
+        padding: 2%; 
+    }
+    .triangulo {
+        border-right: 17em solid transparent;
+        border-top: 8em solid rgb(0, 0, 0, 0.801);
+    }
+    .carousel-text h5 {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+    .carousel-text p {
+        font-size: 0.8em;
+        font-weight: 200;
+    }
+    .carousel-text {
+        text-align: center;
+        padding: 2% 3%;
+        bottom: 30%;
+        right: 20%;
+        left: 20%;
+    }
+    .carousel-text-1 {
+        bottom: 39%;
+    }
+    .carousel-text-2 {
+        bottom: 36%;
+    }
+    .carousel-text-3 {
+        bottom: 35%;
+    }
+    .carousel-text-4 {
+        bottom: 26%;
+    }
+    .samsung-logo {
+        max-width: 15%; /* Controla el tamaño del logo */
+    }
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXX */
+/* X Seccion Servicios X */
+/* XXXXXXXXXXXXXXXXXXXXXX */
+
+.servicios {
+    background-color: #000; /* Fondo negro */
+    height: auto;
+}
+
+.triangulo-service {
+    width: 0px;
+    height: 0px;
+    border-bottom: 00px solid rgba(255, 254, 254, 0.904);
+    border-left: 00px solid transparent;
+    border-right: 20em solid transparent;
+    border-top: 15em solid rgba(253, 253, 253, 0.904);
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    z-index: 1;
+}
+
+.content-service {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.firmas {
+    display: flex;
+    flex-direction: column;
+}
+
+.firmas img {
+    width: auto;
+    height: 6vh;
+    border-radius: 0px;
+}
+
+.firmas h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.title-servicios h2{
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.title-servicios h3{
+    font-size: 1.5em;
+    font-weight: 100;
+    color: white;
+}
+
+.images-servicios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 40vh;  
+}
+
+.images-servicios img {
+    width: auto; /* Ajusta proporcionalmente */
+    height: 35vh; /* Las imágenes ocuparán el 25% de la altura de la ventana */
+    object-fit: cover; /* Recorta la imagen si es necesario sin deformarla */
+    border-radius: 15%; /* Bordes circulares */
+    border: 5px solid #fff; /* Bordes blancos */
+    box-shadow: 0px 0px 20px white;
+}
+
+.info-servicios {
+    width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+}
+
+.info-servicios h5 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.info-servicios p {
+    font-size: 1.3em;
+}
+
+.d-none {
+    display: flex; 
+}
+.d-sm-block {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    .triangulo-service {
+        border-right: 14em solid transparent;
+        border-top: 10em solid rgba(253, 253, 253, 0.904);
+    }
+    .firmas h2 {
+        font-size: 1.8em;
+    }
+    .firmas img {
+        height: 5vh;
+    }
+    .title-servicios h2{
+        font-size: 2.7em;
+    }
+    .title-servicios h3{
+        font-size: 1.3em;
+    }
+    .images-servicios img {
+        height: 30vh;
+        border-radius: 15%; 
+        border: 3px solid #fff;
+        box-shadow: 0px 0px 10px white;
+    }
+    .info-servicios h5 {
+        font-size: 1.1em;
+        padding-bottom: 1em;
+        font-weight: 400;
+    }
+    
+    .info-servicios p {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 1200px) {
+    .triangulo-service {
+        border-right: 13em solid transparent;
+        border-top: 9em solid rgba(253, 253, 253, 0.904);
+    }
+    .content-service {
+        margin-top: 7%;
+    }
+    .firmas h2 {
+        font-size: 1.5em;
+    }
+    .firmas img {
+        height: 4.6vh;
+    }
+    .title-servicios h2{
+        font-size: 2.4em;
+    }
+    .title-servicios h3{
+        font-size: 1.1em;
+    }
+    .images-servicios {
+        width: 100%;
+    }
+    .images-servicios img {
+        height: 27vh;
+        border-radius: 15%; 
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 5px white;
+    }
+    .info-servicios h5 {
+        font-size: 1.1em;
+        padding-bottom: 1em;
+        font-weight: 400;
+    }
+    .info-servicios p {
+        font-size: 1.2em;
+    }
+}
+@media (max-width: 992px) {
+    .triangulo-service {
+        border-right: 10em solid transparent;
+        border-top: 8em solid rgba(253, 253, 253, 0.904);
+    }
+    .content-service {
+        margin-top: 8%;
+    }
+    .firmas h2 {
+        font-size: 2em;
+    }
+    .firmas img {
+        height: 4.3vh;
+        margin: 0px;
+    }
+    .title-servicios h2{
+        font-size: 2.5em;
+    }
+    .title-servicios h3{
+        font-size: 1.4em;
+    }
+    .images-servicios {
+        width: 100%;
+    }
+    .images-servicios img {
+        height: 24vh;
+        border-radius: 15%; 
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 4px white;
+    }
+    .info-servicios h5 {
+        font-size: 1.3em;
+        padding-bottom: 1em;
+        font-weight: 400;
+    }
+    .info-servicios p {
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+@media (max-width: 768px) {
+    .triangulo-service {
+        border-right: 00em solid transparent;
+        border-top: 0em solid rgba(253, 253, 253, 0.904);
+    }
+    .content-service {
+        margin-top: 5%;
+    }
+    .firmas h2 {
+        font-size: 1.4em;
+    }
+    .firmas img {
+        height: 4.3vh;
+        margin: 0px;
+    }
+    .title-servicios h2{
+        font-size: 2em;
+    }
+    .title-servicios h3{
+        font-size: 1em;
+    }
+    .images-servicios {
+        display: none;
+        width: 0%;
+        height: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .images-servicios img {
+        height: 0vh;
+        border-radius: 15%; 
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 4px white;
+    }
+    .carousel-service {
+        max-width: 53vh; /* Ajusta la altura del carrusel según lo que necesites */
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        overflow: hidden; /* Oculta contenido que sobresalga del carrusel */
+    }
+    .carousel-service img {
+        max-height: 100%; /* Ajusta la imagen a la altura del contenedor */
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho */
+        width: auto;
+        height: 53vh;
+        margin: auto; /* Centra la imagen */
+        object-fit: contain; /* Mantiene las proporciones sin recortar */
+    }
+    .info-servicios {
+        margin-bottom: 1em;
+    }
+    .info-servicios h5 {
+        font-size: 1em;
+        padding-bottom: 1em;
+        font-weight: 400;
+    }
+    .info-servicios p {
+        font-size: 1.1em;
+    }
+}
+
+.box-contactanos {
+    position: relative; /* Necesario para que el overlay se posicione relativo a este contenedor */
+    height: 100vh;
+    background: url('/assets/images/fondo-contactanos.webp') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1; /* Base del contenedor */
+}
+.overlay-contactanos {
+    position: absolute; /* Posiciona el overlay encima del contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.384); /* Fondo negro semitransparente */
+    z-index: 1; /* Se asegura de que esté encima del fondo pero debajo del contenido */
+    pointer-events: none; /* Evita que el overlay interfiera con los clics en los elementos internos */
+}
+.content-contactanos {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.contactanos {
+    z-index: 1;
+    text-align: center;
+    background-color: #ffffffc9;
+    padding: 5em;
+    border-radius: 0px 0px 50px 50px;
+    border: 2px solid #ffffffc0;
+    box-shadow: 0px 0px 5px white;
+}

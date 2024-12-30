@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valejo Tech</title>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <div class="hero container-fluid position-relative d-flex flex-column justify-content-between text-white vh-100">
+        <!-- Overlay oscuro -->
+        <div class="overlay"></div>
+
+        <!-- Menú de navegación -->
+        <nav class="navbar navbar-expand-lg d-none d-lg-flex navbar-dark bg-transparent position-fixed w-100">
+            <div class="container">
+                <a href="#inicio"><img src="/assets/images/logo-navbar.png" alt="Logo-Valejo Tech" class="img-fluid me-2"></a>
+                <a class="navbar-brand" href="#inicio">VALEJO TECH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">NOSOTROS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">CONTÁCTANOS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div class="row justify-content-center align-items-center text-center text-lg-start flex-grow-1">
+            <!-- Logo principal -->
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="logo-container position-relative">
+                    <img src="/assets/images/Icon-logo.png" alt="Logo Valejo Tech" class="logo">
+                </div>
+            </div>
+            <!-- Texto y botón -->
+            <div class="col-lg-6">
+                <h2 class="subtittle">¿Tu electrodoméstico necesita una reparación?</h2>
+                <h1 class="fw-bold tittle">¡Solicítanos!</h1>
+                <p class="subtittle-1">¡Estamos aquí para ayudarte!</p>
+                <a href="#contacto" class="rounded-pill buttom">CONTÁCTANOS</a>
+                <div class="samsung-logo">
+                    <a href="#samsung"><img src="/assets/images/Samsung.jpg" alt="Samsung" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-container position-relative overflow-hidden vh-100">
+        <!-- Overlay oscuro -->
+        <div class="overlay-carousel position-absolute top-0 start-0 w-100 h-100"></div>
+        <!-- Text conocenos -->
+        <div class="triangulo"></div>
+            <div class="text-conocenos">
+                <div class="title-conocenos">
+                    <h2>¡Conócenos!</h2>
+                    <h3>ValeJo Tech | Service Oficial</h3>
+                </div>
+            </div>
+        <!-- Carrusel -->
+        <div id="carouselExampleCaptions" class="carousel slide h-100">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100">
+                    <img src="./assets/images/bespoke-samsung.avif" class="d-block w-100 h-100 object-fit-cover" alt="First slide">
+                    <div class="carousel-text carousel-text-1">
+                        <h5>ValeJo Tech</h5>
+                        <p>Es una empresa especializada en brindar servicio técnico para tus electrodomésticos.</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="./assets/images/Samsung-SideBySide2.avif" class="d-block w-100 h-100 object-fit-cover" alt="Second slide">
+                    <div class="carousel-text carousel-text-2">
+                        <h5>ValeJo Tech</h5>
+                        <p>Como servicio técnico oficial de las
+                            reconocidas marcas Samsung,
+                            contamos con la autorización y el
+                            respaldo directo de estas
+                            compañías.</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="/assets/images/conocenos-fondo.avif" class="d-block w-100 h-100 object-fit-cover" alt="Third slide">
+                    <div class="carousel-text carousel-text-3">
+                            <h5>ValeJo Tech</h5>
+                            <p>Estamos capacitados y autorizados para
+                            realizar reparaciones y mantenimiento en
+                            electrodomésticos de esta marca,
+                            asegurando la calidad y el uso de repuestos
+                            originales.
+                            </p>         
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="/assets/images/Samsung-SideBySide.avif" class="d-block w-100 h-100 object-fit-cover" alt="Fourth slide">
+                    <div class="carousel-text carousel-text-4">
+                        <h5>ValeJo Tech</h5>
+                        <p>En el área de administración nos dedicamos a atender las consultas
+                            y necesidades de nuestros clientes. Nuestro personal administrativo
+                            está siempre disponible para proporcionar información, programar
+                            visitas de servicio y responder cualquier pregunta que pueda surgir
+                            durante el proceso de reparación y ¡mucho más!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="triangulo-service"></div>
+    <div class="servicios vh-100 d-flex flex-column justify-content-between align-items-center text-white">
+        <!-- Encabezado -->
+        <div class="content-service">
+            <div class="title-servicios">
+                <h2>Servicios</h2>
+                <h3>ValeJo Tech | Service Oficial</h3>
+            </div>
+            <div class="firmas d-flex justify-content-center align-items-center">
+                <h2>Firmas Oficiales</h2>
+                <img src="/assets/images/Samsung.jpg" alt="Logo Samsung" class="logo">
+            </div>
+        </div>
+    
+        <!-- Galería de Imágenes -->
+        <div class="images-servicios">
+            <div class="image-service ">
+                <img src="./assets/images/img-service1.jpg" alt="Servicio 1">
+            </div>
+            <div class="image-service">
+                <img src="./assets/images/img-service2.png" alt="Servicio 2">
+            </div>
+            <div class="image-service">
+                <img src="./assets/images/img-service.webp" alt="Servicio 3">
+            </div>
+        </div>
+
+        <div id="carouselExampleSlidesOnly" class="carousel-service slide d-block d-sm-block d-md-none" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/img-service1.jpg" class="d-block w-100" alt="Servicio 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/img-service2.png" class="d-block w-100" alt="Servicio 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/Samsung-SideBySide2.avif" class="d-block w-100" alt="Servicio 3">
+                </div>
+            </div>
+        </div>
+        
+    
+        <!-- Información Adicional -->
+        <div class="info-servicios">
+            <h5>"Nos especializamos en la reparación y mantenimiento de electrodomésticos de línea blanca, incluyendo heladeras, cavas, lavarropas, lavavajillas, lava-secarropas, secarropas, aires acondicionados y microondas, garantizando soluciones confiables, seguras y con garantía para tu hogar."</h5>
+            <p>¡Otras marcas en fuera de garantía!</p>
+        </div>
+    </div>
+
+    
+    <div class="box-contactanos">
+        <div class="overlay-contactanos"></div>
+        <div class="content-contactanos">
+            <div class="contactanos">
+                <h2>CONTÁCTANOS</h2>
+                <p>servicevalejo@gmail.com</p>
+                <p>Lunes a Viernes de 08:00 a 17:00hs.</p>
+                <p>Luis Pasteur 1976, X5011BVB Córdoba</p>
+                <h5>¡No dudes en comunicarte!</h5>
+            </div>
+            <div class="clientes">
+                <div class="review">
+                    <img src="imagen-del-cliente.jpg" alt="Foto del cliente" class="review-img">
+                    <h3 class="review-name">Juan Pérez</h3>
+                    <p class="review-text">¡El servicio fue excelente! Muy recomendado.</p>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>    
+                <div class="review">
+                    <img src="imagen-del-cliente.jpg" alt="Foto del cliente" class="review-img">
+                    <h3 class="review-name">Juan Pérez</h3>
+                    <p class="review-text">¡El servicio fue excelente! Muy recomendado.</p>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>    
+                <div class="review">
+                    <img src="imagen-del-cliente.jpg" alt="Foto del cliente" class="review-img">
+                    <h3 class="review-name">Juan Pérez</h3>
+                    <p class="review-text">¡El servicio fue excelente! Muy recomendado.</p>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>    
+                <div class="review">
+                    <img src="imagen-del-cliente.jpg" alt="Foto del cliente" class="review-img">
+                    <h3 class="review-name">Juan Pérez</h3>
+                    <p class="review-text">¡El servicio fue excelente! Muy recomendado.</p>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                </div>    
+            </div>
+        </div>
+    </div>
+</html>
