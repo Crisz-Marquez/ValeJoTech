@@ -30,6 +30,25 @@ body {
     pointer-events: none; /* Permite interactuar con los elementos encima */
 }
 
+.whatsapp-link {
+    position: fixed;
+    bottom: 4em; /* Espacio desde la parte inferior */
+    right: 4em; /* Espacio desde la parte derecha */
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para que se vea mejor */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.whatsapp-link img {
+    width: 4em; /* Tamaño del ícono */
+    height: 4em;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.1); /* Efecto de agrandar al pasar el mouse */
+}
+
+
 /* Menú de navegación */
 .container {
     background-color: black;
@@ -147,8 +166,8 @@ body {
 /* logo Samsung*/
 .samsung-logo {
     position: fixed; /* Mantiene la posición fija al hacer scroll */
-    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
-    right: 10px; /* Ajusta la distancia desde el lado derecho */
+    bottom: 1.2em; /* Ajusta la distancia desde la parte inferior */
+    left: 4em; /* Ajusta la distancia desde el lado derecho */
     z-index: 100; /* Asegura que esté siempre encima del contenido */
     max-width: 8%; /* Controla el tamaño del logo */
     transition: transform 0.2s ease; /* Efectos al interactuar */
@@ -907,21 +926,87 @@ body {
     pointer-events: none; /* Evita que el overlay interfiera con los clics en los elementos internos */
 }
 .content-contactanos {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 .contactanos {
-    z-index: 1;
+    display: flex;
+    color: white;
     text-align: center;
-    background-color: #ffffffc9;
-    padding: 5em;
+    background-color: #000000c9;
     border-radius: 0px 0px 50px 50px;
-    border: 2px solid #ffffffc0;
-    box-shadow: 0px 0px 5px white;
-    padding-bottom: 1em;
+    border: 2px solid #000000c0;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    z-index: 1;
+    padding: 2em;
+    align-items: center;
+    flex-direction: column;
 }
 
 .contactanos h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
+    padding-bottom: 0.8em;
+}
+
+.contactanos p {
+    max-width: 60%;
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+.contactanos h5 {
+    padding-top: 0.8em;
+    font-size: 1.5em;
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.map-container iframe {
+    width: 25em;
+    height: 25em; /* Ajusta la altura como desees */
+    border: 0px;
+}
+
+.clientes {
+    z-index: 2;
+    width: 80%;
+    padding-top: 5em;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.review {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 15%;
+    padding: 1em ;
+    border-radius: 2em;
+}
+
+.review img {
+    max-width: 8em;
+}
+
+.review-name {
+    padding-top: 1em;
+    font-size: 1.3em;
+}
+
+.review-text {
+    font-size: 1em;
+}
+
+.review-rating {
+    font-size: 1.1em;
 }
